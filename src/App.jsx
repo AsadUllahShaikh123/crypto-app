@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='bg-gray-800 text-white h-screen'>
+        <div className='bg-gray-800 text-white min-h-screen'>
           <Header />
           <Routes>
             <Route path='/' element={<HomePage />} />
