@@ -21,7 +21,7 @@ const carouselItems ={
 
 const Carousel = () => {
 
-  const {currency} = CryptoState();
+  const {currency,symbol} = CryptoState();
   const [trending, setTrending] = useState([]);
 
   const fetchTrendingCoins= ()=>{
@@ -42,7 +42,7 @@ const Carousel = () => {
         &nbsp;
         <span style={{color: value.profit.includes('-') ? 'red' : 'green'}}>{value.profit}</span>
         </span>
-        <span style={{fontSize:'22px',fontWeight:'bold'}}>{value.price}</span>
+        <span style={{fontSize:'22px',fontWeight:'bold'}}>{symbol}{value.price}</span>
       </Link>
     )
 
